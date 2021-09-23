@@ -3,17 +3,17 @@ var currentDate = moment().format('dddd')+" "+ moment().format("Do MMM YYYY");
 var currentHour = moment().format('h:mm:ss a');
 
 //Hour variables
-var nineAm = $('#hr9');
-var tenAm = $('#hr10');
-var elevenAm = $('#hr11');
-var noon = $('#hr12');
-var onePm = $('#hr13');
-var twoPm = $('#hr14');
-var threePm = $('#hr15');
-var fourPm = $('#hr16');
-var fivePm = $('#hr17');
-var sixPm = $('#hr18');
-var sevenPm = $('#hr19');
+var nineAm = $('#9');
+var tenAm = $('#10');
+var elevenAm = $('#11');
+var noon = $('#12');
+var onePm = $('#13');
+var twoPm = $('#14');
+var threePm = $('#15');
+var fourPm = $('#16');
+var fivePm = $('#17');
+var sixPm = $('#18');
+var sevenPm = $('#19');
 
 // additional variables
 
@@ -65,7 +65,9 @@ function openPage() {
 function background() {
     $(".form-control").each(function() {
         var time = parseInt($(this).attr('id'));
+        console.log(time)
         hour = parseInt(hour);
+        console.log(hour);
         if (hour > time) {
             $(this).addClass('past');
         } else if (hour < time) {
